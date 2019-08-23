@@ -1,0 +1,66 @@
+cars:
+  path: /cars
+  controller: App\Controller\CarController::showCarsList
+
+used_cars:
+  path: /cars/used
+  controller: App\Controller\CarController::getMostUsedCars
+
+add_new_car:
+  path: /cars/add
+  controller: App\Controller\CarController::addNewCar
+
+delete_car:
+  path: /cars/delete/{carID}
+  controller: App\Controller\CarController::deleteCarByID
+
+update_car:
+  path: /cars/update/{carID}
+  controller: App\Controller\CarController::updateCarByID
+
+# ---
+
+add_new_owner:
+  path: /owners/add
+  controller: App\Controller\OwnerController::addNewOwner
+
+delete_owner:
+  path: /owners/delete/{ownerID}
+  controller: App\Controller\OwnerController::deleteOwnerByID
+
+update_owner:
+  path: /owners/update/{ownerID}
+  controller: App\Controller\OwnerController::updateOwnerByID
+
+get_payout_amount:
+  path: /owners/payout/{ownerID}
+  controller: App\Controller\OwnerController::getPayoutAmountByOwnerID
+
+# ---
+
+add_new_client:
+  path: /clients/add
+  controller: App\Controller\ClientController::addNewClient
+
+# ---
+
+add_new_rent:
+  path: /rents/add
+  controller: App\Controller\RentController::addNewRent
+
+edit_rent:
+  path: /rents/edit/{contractID}
+  controller: App\Controller\RentController::editRentByID
+
+coming_rents:
+  path: /rents
+  controller: App\Controller\RentController::showComingRentList
+
+profit_info:
+  path: /rents/profit
+  controller: App\Controller\RentController::getProfitInfo
+
+#---
+login:
+  path: /login
+  controller: App\Controller\AuthController::login
